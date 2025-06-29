@@ -1,0 +1,50 @@
+# Python Virtual Environment
+# 가상 환경 폴더는 프로젝트마다 독립적이므로 Git에 포함하지 않습니다.
+venv/
+.venv/
+env/
+.env/
+
+# Data Files
+# 다운로드한 원본 데이터 CSV 파일은 매우 크고 Git LFS(Large File Storage)로 관리하거나
+# 재다운로드할 수 있으므로 Git에 포함하지 않습니다.
+mlb_statcast_2021_2024_data.csv
+
+# Generated Output Files (그래프, 모델 등)
+# 코드를 실행하여 생성되는 그래프 이미지 파일
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# 학습된 딥러닝 모델 파일
+# 모델의 가중치 및 구조를 저장하는 파일들입니다. 크기가 클 수 있습니다.
+*.h5
+*.keras
+saved_model/             # TensorFlow SavedModel 형식 폴더
+checkpoints/             # 모델 학습 중 저장되는 체크포인트 폴더
+
+# Python Specific Files
+# 파이썬이 자동으로 생성하는 캐시 및 컴파일된 파일들
+__pycache__/
+*.pyc
+*.pyd
+*.ipynb_checkpoints/     # Jupyter Notebook 사용 시 생성되는 체크포인트
+.ipynb_checkpoints/      # Jupyter Notebook 사용 시 생성되는 숨김 체크포인트
+
+# IDE/Editor Specific Files
+# VS Code, PyCharm 등 통합 개발 환경에서 생성하는 설정 파일
+.vscode/                 # VS Code 설정 폴더 (일반적으로 무시하지 않고 특정 파일만 무시하기도 합니다)
+# 만약 .vscode 폴더 전체를 무시하지 않고 특정 파일만 무시하려면 아래와 같이 변경:
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/extensions.json
+# !.vscode/launch.json
+# !.vscode/tasks.json
+
+.idea/                   # PyCharm 설정 폴더
+
+# Operating System Specific Files
+# 운영체제가 자동으로 생성하는 파일
+.DS_Store                # macOS
+Thumbs.db                # Windows
